@@ -6,7 +6,7 @@ int main(int argc, char **argv) {
     printf("input of '%s', pid=%d > ", argv[0], getpid());
     fflush(stdout);
     if (scanf("%d", &x) != 1) {
-        printf("'%s', pid=%d: incorrect input\n", argv[0], getpid());
+        fprintf(stderr, "Error in process '%s', pid=%d\n", argv[0], getpid());
         return 1;
     }
     fflush(stdin);
